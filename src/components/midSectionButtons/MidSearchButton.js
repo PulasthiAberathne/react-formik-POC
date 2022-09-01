@@ -1,13 +1,13 @@
 import React from "react";
 
-const MidSectionButtons = () => {
+const MidSearchButton = () => {
   return (
     <div
       style={{
         display: "flex",
         flexDirection: "row",
         marginTop: 20,
-        marginLeft: 1550,
+        marginLeft: 10,
         alignItems: "right",
         alignContent: "right",
         fontWeight: "bold",
@@ -15,13 +15,9 @@ const MidSectionButtons = () => {
     >
       <div style={{ paddingRight: 10 }}></div>
       <div className="button-container">
-        <button>First</button>
-      </div>
-      <div style={{ paddingRight: 10 }}></div>
-      <div className="button-container">
         <button>
           <img
-            src={require("../../assets/images/leftGreen.png")}
+            src={require("../../assets/images/add.png")}
             alt="gree-arrow"
             className="arrow"
             style={{
@@ -30,35 +26,54 @@ const MidSectionButtons = () => {
               marginRight: 10,
             }}
           />
-          Previous
+          Add
         </button>
       </div>
       <div style={{ paddingRight: 10 }}></div>
       <div className="button-container">
         <button>
-          Next
           <img
-            src={require("../../assets/images/rightGreen.png")}
+            src={require("../../assets/images/Custom-Icon-Design-Flatastic-1-Edit.ico")}
             alt="gree-arrow"
             className="arrow"
             style={{
               width: 15,
               height: 15,
-              marginLeft: 10,
+              marginRight: 10,
             }}
           />
+          Edit
         </button>
+      </div>
+      <div style={{ paddingLeft: 10 }}>
+        <input
+          type="text"
+          placeholder="Quick Search"
+          style={{ color: "grey", fontStyle: "italic" }}
+        />
       </div>
       <div style={{ paddingRight: 10 }}></div>
       <div className="button-container">
-        <button>Last</button>
+        <button>
+          <img
+            src={require("../../assets/images/search-removebg-preview.png")}
+            alt="gree-arrow"
+            className="arrow"
+            style={{
+              width: 15,
+              height: 15,
+              marginRight: 10,
+            }}
+          />
+          Search
+        </button>
       </div>
       <div style={{ paddingRight: 10 }}></div>
       <div style={{ paddingLeft: 10 }}>
-        <b>1</b>
+        <button>Clear Search</button>
       </div>
     </div>
   );
 };
 
-export default MidSectionButtons;
+export default MidSearchButton;
