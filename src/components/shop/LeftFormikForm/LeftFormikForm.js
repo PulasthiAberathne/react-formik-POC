@@ -16,12 +16,14 @@ const LeftFormikForm = () => {
         marginLeft: 20,
         display: "flex",
         fontWeight: "bolder",
+        alignContent: "left",
+        justifyContent: "left",
       }}
     >
       <div
         style={{
           borderWeight: 1,
-          display: "grid",
+          display: "flex",
           gridTemplateColumns: "repeat(3, 1fr)",
           gridGap: 30,
           width: "70%",
@@ -29,10 +31,16 @@ const LeftFormikForm = () => {
           justifyContent: "left",
         }}
       >
-        <div style={{}}>
+        <div
+          style={{
+            display: "flex",
+            alignContent: "left",
+            justifyContent: "left",
+          }}
+        >
           {" "}
           <form>
-            <label style={{}}>
+            <label style={{ marginBottom: 10 }}>
               Status
               <br />
               <select style={{}}>
@@ -41,48 +49,56 @@ const LeftFormikForm = () => {
                 ))}
               </select>
             </label>
+            <br />
 
-            <label style={{}}>
+            <label style={{ marginBottom: 10 }}>
               Shop Number SAP
               <br />
               <input type="text" value="3741327" disabled />
             </label>
+            <br />
 
-            <label style={{}}>
+            <label style={{ marginBottom: 10 }}>
               Shop Number Legacy
               <br />
               <input type="text" value="07-413-27" disabled />
             </label>
+            <br />
 
-            <label style={{}}>
+            <label style={{ marginBottom: 10 }}>
               PIN Number
               <br />
               <input type="text" value="6200" disabled />
             </label>
+            <br />
 
-            <label style={{}}>
+            <label style={{ marginBottom: 10 }}>
               Warehouse Account Number
               <br />
               <input type="text" value="" disabled />
             </label>
+            <br />
 
-            <label style={{}}>
+            <label style={{ marginBottom: 10 }}>
               Original Signup Date
               <br />
               <input type="date" value="2020-08-05" disabled />
             </label>
+            <br />
 
-            <label style={{}}>
+            <label style={{ marginBottom: 10 }}>
               Signup Date
               <br />
-              <input type="date" value="" disabled />
+              <input type="date" value="" />
             </label>
+            <br />
 
-            <label style={{}}>
+            <label style={{ marginBottom: 10 }}>
               Signature Date
               <br />
-              <input type="date" value="" disabled />
+              <input type="date" value="" />
             </label>
+            <br />
           </form>
         </div>
 
