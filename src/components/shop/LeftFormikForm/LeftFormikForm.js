@@ -89,7 +89,7 @@ const LeftFormikForm = () => {
             <label style={{ marginBottom: 10 }}>
               Signup Date
               <br />
-              <input type="date" value="" />
+              <input type="date" value="" placeholder="2021-06-03" />
             </label>
             <br />
 
@@ -97,6 +97,20 @@ const LeftFormikForm = () => {
               Signature Date
               <br />
               <input type="date" value="" />
+            </label>
+            <br />
+
+            <label style={{ marginBottom: 10 }}>
+              Cancel Date
+              <br />
+              <input type="date" value="" placeholder="2021-06-09" />
+            </label>
+            <br />
+
+            <label style={{ marginBottom: 10 }}>
+              Reason for Cancelation
+              <br />
+              <input type="text" value="" />
             </label>
             <br />
           </form>
