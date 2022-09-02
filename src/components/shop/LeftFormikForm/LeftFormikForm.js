@@ -301,11 +301,25 @@ const LeftFormikForm = () => {
               </select>
             </label>
             <br />
-            <textarea value='DO NOT CONTACT' disabled></textarea>
+            <textarea value="DO NOT CONTACT" disabled></textarea>
           </form>
         </div>
 
         <div style={{}}>
+          <div>
+            <label>Shop Program</label>
+            <br />
+            <label>SAX</label>
+            <br />
+            <img
+              src={require("../../../assets/images/shopImage.png")}
+              alt="shop-logo"
+              style={{
+                width: 150,
+                height: 75,
+              }}
+            />
+          </div>
           <form>
             <label style={{}}>
               Status
