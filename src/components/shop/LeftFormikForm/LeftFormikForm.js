@@ -41,6 +41,48 @@ const LeftFormikForm = () => {
                 ))}
               </select>
             </label>
+
+            <label style={{}}>
+              Shop Number SAP
+              <br />
+              <input type="text" value="3741327" disabled />
+            </label>
+
+            <label style={{}}>
+              Shop Number Legacy
+              <br />
+              <input type="text" value="07-413-27" disabled />
+            </label>
+
+            <label style={{}}>
+              PIN Number
+              <br />
+              <input type="text" value="6200" disabled />
+            </label>
+
+            <label style={{}}>
+              Warehouse Account Number
+              <br />
+              <input type="text" value="" disabled />
+            </label>
+
+            <label style={{}}>
+              Original Signup Date
+              <br />
+              <input type="date" value="2020-08-05" disabled />
+            </label>
+
+            <label style={{}}>
+              Signup Date
+              <br />
+              <input type="date" value="" disabled />
+            </label>
+
+            <label style={{}}>
+              Signature Date
+              <br />
+              <input type="date" value="" disabled />
+            </label>
           </form>
         </div>
 
