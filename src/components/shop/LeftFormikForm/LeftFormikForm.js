@@ -31,6 +31,23 @@ const LeftFormikForm = () => {
     { label: "Yukon", value: "yukon" },
   ];
 
+  const distributionCenters = [
+    { label: "Moncton", value: "moncton" },
+    { label: "Alberta", value: "alberta" },
+    { label: "British Columbia", value: "bc" },
+    { label: "Manitoba", value: "manitoba" },
+    { label: "New Brunswick", value: "nb" },
+    { label: "Newfoundland and Labrador", value: "nl" },
+    { label: "Northwest Territories", value: "nt" },
+    { label: "Nova Scotia", value: "ns" },
+    { label: "Nunavut", value: "nunavut" },
+    { label: "Ontario", value: "ontario" },
+    { label: "Prince Edward Island", value: "pi" },
+    { label: "Quebec", value: "quebec" },
+    { label: "Saskatchewan", value: "saskatchewan" },
+    { label: "Yukon", value: "yukon" },
+  ];
+
   const provenance = [
     { label: "Other", value: "Other" },
     { label: "Validated", value: "validated" },
@@ -52,6 +69,22 @@ const LeftFormikForm = () => {
     { label: "You May Contact", value: "yes" },
     { label: "You May Not Contact", value: "no" },
   ];
+
+  const accountType = [
+    { label: "Shop", value: "shop" },
+    { label: "Not Shop", value: "no" },
+  ];
+
+  const KITstatus = [
+    { label: "-", value: "dash" },
+    { label: "Not Shop", value: "no" },
+  ];
+
+  const nameNTitle = [
+    { label: "Mr. Danny Leblanc", value: "danny" },
+    { label: "Mr. Charles Leclare", value: "lec" },
+  ];
+
   return (
     <div
       style={{
@@ -321,11 +354,77 @@ const LeftFormikForm = () => {
             />
           </div>
           <form>
-            <label style={{}}>
-              Status
+            <label style={{ marginBottom: 10 }}>
+              Number of Technicians
+              <br />3
+            </label>
+            <br />
+
+            <label style={{ marginBottom: 10 }}>
+              Number of Service Bays
+              <br />
+              <input type="text" value="2" disabled />
+            </label>
+            <br />
+
+            <label style={{ marginBottom: 10 }}>
+              Door Rate
+              <br />
+              <input type="text" value="0.00" disabled />
+            </label>
+            <br />
+
+            <label style={{ marginBottom: 10 }}>
+              KIT STATUS
               <br />
               <select style={{ marginLeft: 10 }}>
-                {options.map((option) => (
+                {KITstatus.map((option) => (
+                  <option value={option.value}>{option.label}</option>
+                ))}
+              </select>
+            </label>
+            <br />
+
+            <label style={{ marginBottom: 10 }}>
+              Door Rate
+              <br />
+              <input type="date" value="" />
+            </label>
+            <br />
+
+            <label style={{ marginBottom: 10 }}>
+              <textarea disabled></textarea>
+            </label>
+            <br />
+
+            <label style={{}}>
+              Nebs
+              <br />
+              <select style={{ marginLeft: 10 }}>
+                {yesNo.map((option) => (
+                  <option value={option.value}>{option.label}</option>
+                ))}
+              </select>
+            </label>
+
+            <div>
+              <label>Major Accounts</label>
+              <br />
+              <img
+                src={require("../../../assets/images/shopImage.png")}
+                alt="none"
+                style={{
+                  width: 150,
+                  height: 75,
+                }}
+              />
+            </div>
+
+            <label style={{}}>
+              Account Type
+              <br />
+              <select style={{ marginLeft: 10 }}>
+                {accountType.map((option) => (
                   <option value={option.value}>{option.label}</option>
                 ))}
               </select>
@@ -334,8 +433,107 @@ const LeftFormikForm = () => {
         </div>
       </div>
       <div style={{}}>
-        <div>Shop</div>
-        <div>Shop</div>
+        <div>
+          <div
+            style={{
+              backgroundColor: "#3F3D50",
+              color: "white",
+              fontWeight: "bolder",
+              display: "flex",
+              paddingLeft: 10,
+              marginLeft: 20,
+              marginRight: 20,
+              marginTop: 15,
+              height: 30,
+              width: "100%",
+              alignItems: "center",
+            }}
+          >
+            Distribution Centre
+          </div>
+          <label style={{ marginBottom: 10 }}>
+            Distribution Centre
+            <br />
+            <select style={{ marginLeft: 10 }}>
+              {distributionCenters.map((option) => (
+                <option value={option.value}>{option.label}</option>
+              ))}
+            </select>
+          </label>
+          <br />
+
+          <label style={{ marginBottom: 10 }}>
+            FSP Title, Name
+            <br />
+            <select style={{ marginLeft: 10 }}>
+              {nameNTitle.map((option) => (
+                <option value={option.value}>{option.label}</option>
+              ))}
+            </select>
+          </label>
+          <br />
+
+          <label style={{ marginBottom: 10 }}>
+            Email
+            <br />
+            <input type="email" value="daleblanc@uniselect.com" disabled />
+          </label>
+          <br />
+        </div>
+        <div>
+          <div
+            style={{
+              backgroundColor: "#3F3D50",
+              color: "white",
+              fontWeight: "bolder",
+              display: "flex",
+              paddingLeft: 10,
+              marginLeft: 20,
+              marginRight: 20,
+              marginTop: 15,
+              height: 30,
+              width: "100%",
+              alignItems: "center",
+            }}
+          >
+            Member
+          </div>
+
+          <label style={{ marginBottom: 10 }}>
+            Member Association
+            <br />
+            <select style={{ marginLeft: 10 }}>
+              {distributionCenters.map((option) => (
+                <option value={option.value}>{option.label}</option>
+              ))}
+            </select>
+            <button style={{ marginLeft: 10 }}>
+              <img
+                src={require("../../../assets/images/rightGreen.png")}
+                alt="gree-arrow"
+                className="arrow"
+                style={{
+                  width: 15,
+                  height: 15,
+                  marginRight: 10,
+                }}
+              />
+              Open New Tab
+            </button>
+          </label>
+          <br />
+
+          <label style={{ marginBottom: 10 }}>
+            Rep Name
+            <br />
+            <select style={{ marginLeft: 10, width: 300 }}>
+              {nameNTitle.map((option) => (
+                <option value={option.value}>{option.label}</option>
+              ))}
+            </select>
+          </label>
+          <br />
+        </div>
       </div>
     </div>
   );
