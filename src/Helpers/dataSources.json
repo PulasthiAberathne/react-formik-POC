@@ -1,0 +1,150 @@
+{
+    "data": {
+        "options": [
+            {
+                "label": "Active",
+                "value": "active"
+            },
+            {
+                "label": "Inactive",
+                "value": "inactive"
+            },
+            {
+                "label": "Abundant",
+                "value": "abundant"
+            }
+        ],
+        "optionsGST": [
+            {
+                "label": "Validated",
+                "value": "validated"
+            },
+            {
+                "label": "Not Validated",
+                "value": "notValidated"
+            },
+            {
+                "label": "Abundant",
+                "value": "abundant"
+            }
+        ],
+        "province": [
+            {
+                "label": "Alberta",
+                "value": "alberta"
+            },
+            {
+                "label": "British Columbia",
+                "value": "bc"
+            },
+            {
+                "label": "Manitoba",
+                "value": "manitoba"
+            },
+            {
+                "label": "New Brunswick",
+                "value": "nb"
+            },
+            {
+                "label": "Newfoundland and Labrador",
+                "value": "nl"
+            },
+            {
+                "label": "Northwest Territories",
+                "value": "nt"
+            },
+            {
+                "label": "Nova Scotia",
+                "value": "ns"
+            },
+            {
+                "label": "Nunavut",
+                "value": "nunavut"
+            },
+            {
+                "label": "Ontario",
+                "value": "ontario"
+            },
+            {
+                "label": "Prince Edward Island",
+                "value": "pi"
+            },
+            {
+                "label": "Quebec",
+                "value": "quebec"
+            },
+            {
+                "label": "Saskatchewan",
+                "value": "saskatchewan"
+            },
+            {
+                "label": "Yukon",
+                "value": "yukon"
+            }
+        ],
+        "provenance": [
+            {
+                "label": "Other",
+                "value": "Other"
+            },
+            {
+                "label": "Validated",
+                "value": "validated"
+            },
+            {
+                "label": "Not Validated",
+                "value": "notValidated"
+            }
+        ],
+        "yesNo": [
+            {
+                "label": "Yes",
+                "value": "yes"
+            },
+            {
+                "label": "No",
+                "value": "no"
+            }
+        ],
+        "contact": [
+            {
+                "label": "You May Contact",
+                "value": "yes"
+            },
+            {
+                "label": "You May Not Contact",
+                "value": "no"
+            }
+        ],
+        "accountType": [
+            {
+                "label": "Shop",
+                "value": "shop"
+            },
+            {
+                "label": "Not Shop",
+                "value": "no"
+            }
+        ],
+        "KITStatus": [
+            {
+                "label": "-",
+                "value": "dash"
+            },
+            {
+                "label": "Not Shop",
+                "value": "no"
+            }
+        ],
+        "nameNTitle": [
+            {
+                "label": "Mr. Danny Leblanc",
+                "value": "danny"
+            },
+            {
+                "label": "Sir. Lewis Hamilton",
+                "value": "lec"
+            }
+        ]
+    }
+}

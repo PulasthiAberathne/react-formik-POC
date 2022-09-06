@@ -53,6 +53,7 @@ const LeftFormikForm = () => {
     { label: "Abundant", value: "abundant" },
   ];
 
+  // majorAccount
   const optionsGST = [
     { label: "Validated", value: "validated" },
     { label: "Not Validated", value: "notValidated" },
@@ -75,6 +76,7 @@ const LeftFormikForm = () => {
     { label: "Yukon", value: "yukon" },
   ];
 
+  // province
   const distributionCenters = [
     { label: "Moncton", value: "moncton" },
     { label: "Alberta", value: "alberta" },

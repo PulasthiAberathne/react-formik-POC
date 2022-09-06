@@ -8,9 +8,9 @@ const ShopIndex = () => {
   const isTab = true;
   return (
     <div>
-      <HeaderShop />
       {!isTab ? (
         <div>
+          <HeaderShop />
           <LeftFormikForm />
         </div>
       ) : (
