@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useFormik } from "formik";
+import DataTable from "react-data-table-component";
 import data from "../../../Helpers/dataSources.json";
+import tableData from "../../../Helpers/tableData.json";
 
 const FormikTabs = () => {
   const [shop, setShop] = useState(true);
@@ -10,10 +12,12 @@ const FormikTabs = () => {
   const [formName, setFormName] = useState("shop");
 
   const dropDownData = data.data;
+  const tableDataArr = tableData.tableData;
 
   useEffect(() => {
     console.log(formName);
-  }, [formName]);
+    console.log(dataTable);
+  }, [formName, dataTable]);
 
   const handleClick = (value) => {
     setShop(false);
@@ -95,6 +99,17 @@ const FormikTabs = () => {
       console.log(values);
     },
   });
+
+  const columns = [
+    {
+      name: "Title",
+      selector: (row) => row.title,
+    },
+    {
+      name: "Year",
+      selector: (row) => row.year,
+    },
+  ];
 
   return (
     <div>
@@ -706,7 +721,7 @@ const FormikTabs = () => {
         </form>
       ) : distributionCenter ? (
         <form id={formName} onSubmit={formikForm.handleSubmit}>
-          <label style={{ marginBottom: 10 }}>
+          <label style={{ marginBottom: 10, marginTop: 30 }}>
             Distribution Centre
             <br />
             <select
@@ -753,7 +768,7 @@ const FormikTabs = () => {
         </form>
       ) : member ? (
         <form id={formName} onSubmit={formikForm.handleSubmit}>
-          <label style={{ marginBottom: 10 }}>
+          <label style={{ marginBottom: 10, marginTop: 30 }}>
             Member Association
             <br />
             <select
@@ -799,13 +814,31 @@ const FormikTabs = () => {
           <br />
         </form>
       ) : (
-        <form id={formName}></form>
+        <form
+          id={formName}
+          style={{ marginLeft: 60, marginTop: 10, marginRight: 60 }}
+        >
+          <DataTable
+            columns={columns}
+            data={tableDataArr}
+            highlightOnHover
+            pointerOnHover
+            expandableRows
+            expandOnRowClicked
+          />
+        </form>
       )}
 
       <input
         type="submit"
         form={formName}
-        style={{ marginBottom: 10, width: 200, marginLeft: 10, marginTop: 100 }}
+        style={{
+          marginBottom: 10,
+          width: 200,
+          marginLeft: 20,
+          marginTop: 100,
+          fontWeight: "bolder",
+        }}
         value="Continue"
       />
     </div>
