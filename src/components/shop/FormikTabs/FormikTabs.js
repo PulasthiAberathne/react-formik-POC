@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useFormik } from "formik";
-import DataTable from "react-data-table-component";
 import data from "../../../Helpers/dataSources.json";
-import tableData from "../../../Helpers/tableData.json";
+import DataTableComponent from "../../DataTable/DataTableComponent";
 
 const FormikTabs = () => {
   const [shop, setShop] = useState(true);
@@ -12,12 +11,10 @@ const FormikTabs = () => {
   const [formName, setFormName] = useState("shop");
 
   const dropDownData = data.data;
-  const tableDataArr = tableData.tableData;
 
   useEffect(() => {
     console.log(formName);
-    console.log(dataTable);
-  }, [formName, dataTable]);
+  }, [formName]);
 
   const handleClick = (value) => {
     setShop(false);
@@ -99,17 +96,6 @@ const FormikTabs = () => {
       console.log(values);
     },
   });
-
-  const columns = [
-    {
-      name: "Title",
-      selector: (row) => row.title,
-    },
-    {
-      name: "Year",
-      selector: (row) => row.year,
-    },
-  ];
 
   return (
     <div>
@@ -818,29 +804,26 @@ const FormikTabs = () => {
           id={formName}
           style={{ marginLeft: 60, marginTop: 10, marginRight: 60 }}
         >
-          <DataTable
-            columns={columns}
-            data={tableDataArr}
-            highlightOnHover
-            pointerOnHover
-            expandableRows
-            expandOnRowClicked
-          />
+          <DataTableComponent />
         </form>
       )}
 
-      <input
-        type="submit"
-        form={formName}
-        style={{
-          marginBottom: 10,
-          width: 200,
-          marginLeft: 20,
-          marginTop: 100,
-          fontWeight: "bolder",
-        }}
-        value="Continue"
-      />
+      {!dataTable ? (
+        <input
+          type="submit"
+          form={formName}
+          style={{
+            marginBottom: 10,
+            width: 200,
+            marginLeft: 20,
+            marginTop: 100,
+            fontWeight: "bolder",
+          }}
+          value="Continue"
+        />
+      ) : (
+        <div></div>
+      )}
     </div>
   );
 };
