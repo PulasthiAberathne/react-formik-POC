@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useFormik } from "formik";
 import data from "../../../Helpers/dataSources.json";
 import DataTableComponent from "../../DataTable/DataTableComponent";
+import { OptionDropDown, InputField } from "../../../components/index";
 
 const FormikTabs = () => {
   const [shop, setShop] = useState(true);
@@ -11,6 +12,63 @@ const FormikTabs = () => {
   const [formName, setFormName] = useState("shop");
 
   const dropDownData = data.data;
+
+  const constants = {
+    status: { label: "Status", id: "status", type: "" },
+    shopNumberSAP: { label: "Shop Number SAP", id: "shopNumber", type: "text" },
+    shopNumberLegacy: { label: "Status", id: "shopNumberLegacy", type: "text" },
+    PIN: { label: "PIN Number", id: "PIN", type: "text" },
+    warehouseAccountNumber: {
+      label: "Warehouse Account Number",
+      id: "warehouseAccountNumber",
+      type: "number",
+    },
+    originalSignDate: {
+      label: "Original Signup Date",
+      id: "originalSignDate",
+      type: "date",
+    },
+    signUpDate: {
+      label: "Sign Up Date",
+      id: "signUpDate",
+      type: "date",
+    },
+    signatureDate: {
+      label: "Signature Date",
+      id: "signatureDate",
+      type: "date",
+    },
+    cancelDate: {
+      label: "Cancel Date",
+      id: "cancelDate",
+      type: "date",
+    },
+    cancelReason: {
+      label: "Reason for Cancel",
+      id: "cancelReason",
+      type: "text",
+    },
+    excludeExitInterview: {
+      label: "Exclude Exit Interview",
+      id: "excludeExitInterview",
+      type: "checkbox",
+    },
+    GST: {
+      label: "GST",
+      id: "GST",
+      type: "text",
+    },
+    GSTStatus: {
+      label: "GST Status",
+      id: "GSTStatus",
+      type: "",
+    },
+  };
+
+  const placeholders = {
+    signUpDate: "09/06/2021",
+    cancelDate: "06/09/2021",
+  };
 
   useEffect(() => {
     console.log(formName);
@@ -125,7 +183,7 @@ const FormikTabs = () => {
               handleClick("shop");
             }}
           >
-            General
+            Shop
           </button>
         </div>
         <div>
@@ -192,175 +250,104 @@ const FormikTabs = () => {
             }}
           >
             <div>
-              <label style={{ marginBottom: 10 }}>
-                Status
-                <br />
-                <select
-                  style={{}}
-                  onChange={formikForm.handleChange}
-                  value={formikForm.values.status}
-                  id="status"
-                >
-                  {dropDownData.options.map((option) => (
-                    <option value={option.value}>{option.label}</option>
-                  ))}
-                </select>
-              </label>
+              <OptionDropDown
+                constants={constants.status}
+                formik={formikForm}
+                data={dropDownData.options}
+                value={formikForm.values.status}
+              />
               <br />
 
-              <label style={{ marginBottom: 10 }}>
-                Shop Number SAP
-                <br />
-                <input
-                  type="text"
-                  onChange={formikForm.handleChange}
-                  value={formikForm.values.shopNumber}
-                  id="shopNumber"
-                  disabled
-                />
-              </label>
+              <InputField
+                constants={constants.shopNumberSAP}
+                formik={formikForm}
+                isDisabled={true}
+                value={formikForm.values.shopNumber}
+              />
               <br />
 
-              <label style={{ marginBottom: 10 }}>
-                Shop Number Legacy
-                <br />
-                <input
-                  type="text"
-                  disabled
-                  onChange={formikForm.handleChange}
-                  value={formikForm.values.shopNumberLegacy}
-                  id="shopNumberLegacy"
-                />
-              </label>
+              <InputField
+                constants={constants.shopNumberLegacy}
+                formik={formikForm}
+                isDisabled={true}
+                value={formikForm.values.shopNumberLegacy}
+              />
               <br />
 
-              <label style={{ marginBottom: 10 }}>
-                PIN Number
-                <br />
-                <input
-                  type="text"
-                  disabled
-                  onChange={formikForm.handleChange}
-                  value={formikForm.values.PIN}
-                  id="PIN"
-                />
-              </label>
+              <InputField
+                constants={constants.PIN}
+                formik={formikForm}
+                isDisabled={true}
+                value={formikForm.values.PIN}
+              />
               <br />
 
-              <label style={{ marginBottom: 10 }}>
-                Warehouse Account Number
-                <br />
-                <input
-                  type="text"
-                  onChange={formikForm.handleChange}
-                  value={formikForm.values.warehouseAccountNumber}
-                  id="warehouseAccountNumber"
-                />
-              </label>
+              <InputField
+                constants={constants.warehouseAccountNumber}
+                formik={formikForm}
+                isDisabled={true}
+                value={formikForm.values.warehouseAccountNumber}
+              />
               <br />
 
-              <label style={{ marginBottom: 10 }}>
-                Original Signup Date
-                <br />
-                <input
-                  type="date"
-                  disabled
-                  onChange={formikForm.handleChange}
-                  value={formikForm.values.originalSignDate}
-                  id="originalSignDate"
-                />
-              </label>
+              <InputField
+                constants={constants.originalSignDate}
+                formik={formikForm}
+                isDisabled={true}
+                value={formikForm.values.originalSignDate}
+              />
               <br />
 
-              <label style={{ marginBottom: 10 }}>
-                Signup Date
-                <br />
-                <input
-                  type="date"
-                  placeholder="2021-06-03"
-                  onChange={formikForm.handleChange}
-                  value={formikForm.values.signUpDate}
-                  id="signUpDate"
-                />
-              </label>
+              <InputField
+                constants={constants.signUpDate}
+                formik={formikForm}
+                value={formikForm.values.signUpDate}
+                placeholder={placeholders.signUpDate}
+              />
               <br />
 
-              <label style={{ marginBottom: 10 }}>
-                Signature Date
-                <br />
-                <input
-                  type="date"
-                  onChange={formikForm.handleChange}
-                  value={formikForm.values.signatureDate}
-                  id="signatureDate"
-                />
-              </label>
+              <InputField
+                constants={constants.signatureDate}
+                formik={formikForm}
+                value={formikForm.values.signatureDate}
+              />
               <br />
 
-              <label style={{ marginBottom: 10 }}>
-                Cancel Date
-                <br />
-                <input
-                  type="date"
-                  placeholder="2021-06-09"
-                  onChange={formikForm.handleChange}
-                  value={formikForm.values.cancelDate}
-                  id="cancelDate"
-                />
-              </label>
+              <InputField
+                constants={constants.cancelDate}
+                formik={formikForm}
+                value={formikForm.values.cancelDate}
+              />
               <br />
 
-              <label style={{ marginBottom: 10 }}>
-                Reason for Cancelation
-                <br />
-                <input
-                  type="text"
-                  onChange={formikForm.handleChange}
-                  value={formikForm.values.cancelReason}
-                  id="cancelReason"
-                />
-              </label>
+              <InputField
+                constants={constants.cancelReason}
+                formik={formikForm}
+                value={formikForm.values.cancelReason}
+              />
               <br />
 
-              <label style={{ marginBottom: 10 }}>
-                Exclude Exit Interview
-                <br />
-                <input
-                  type="checkbox"
-                  onChange={formikForm.handleChange}
-                  value={formikForm.values.excludeExitInterview}
-                  id="excludeExitInterview"
-                />
-              </label>
+              <InputField
+                constants={constants.excludeExitInterview}
+                formik={formikForm}
+                value={formikForm.values.excludeExitInterview}
+              />
               <br />
 
-              <label style={{ marginBottom: 10 }}>
-                GST
-                <br />
-                <input
-                  type="text"
-                  disabled
-                  onChange={formikForm.handleChange}
-                  value={formikForm.values.GST}
-                  id="GST"
-                />
-              </label>
+              <InputField
+                constants={constants.GST}
+                formik={formikForm}
+                isDisabled={true}
+                value={formikForm.values.GST}
+              />
               <br />
 
-              <label style={{ marginBottom: 10 }}>
-                GST Status
-                <br />
-                <select
-                  style={{}}
-                  onChange={formikForm.handleChange}
-                  value={formikForm.values.GSTStatus}
-                  id="GSTStatus"
-                >
-                  {dropDownData.optionsGST.map((option) => (
-                    <option value={option.value}>{option.label}</option>
-                  ))}
-                </select>
-              </label>
+              <OptionDropDown
+                constants={constants.GSTStatus}
+                formik={formikForm}
+                data={dropDownData.optionsGST}
+                value={formikForm.values.GSTStatus}
+              />
               <br />
             </div>
             <div>
