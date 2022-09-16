@@ -7,6 +7,17 @@
   pointer-events: none;
 }
 
+.custom-component{
+  margin-bottom: 20;
+  align-items: flex-start;
+  justify-items: left;
+}
+
+.custom-container{
+  padding-right: 10;
+  width: 33vw;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

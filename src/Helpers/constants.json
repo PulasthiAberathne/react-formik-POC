@@ -1,0 +1,206 @@
+{
+    "constantsData": {
+        "formConstants": {
+            "status": {
+                "label": "Status",
+                "id": "status",
+                "type": ""
+            },
+            "shopNumberSAP": {
+                "label": "Shop Number SAP",
+                "id": "shopNumber",
+                "type": "text"
+            },
+            "shopNumberLegacy": {
+                "label": "Shop Number Legacy",
+                "id": "shopNumberLegacy",
+                "type": "text"
+            },
+            "PIN": {
+                "label": "PIN Number",
+                "id": "PIN",
+                "type": "text"
+            },
+            "warehouseAccountNumber": {
+                "label": "Warehouse Account Number",
+                "id": "warehouseAccountNumber",
+                "type": "number"
+            },
+            "originalSignDate": {
+                "label": "Original Sign Up Date",
+                "id": "originalSignDate",
+                "type": "date"
+            },
+            "signUpDate": {
+                "label": "Sign Up Date",
+                "id": "signUpDate",
+                "type": "date"
+            },
+            "signatureDate": {
+                "label": "Signature Date",
+                "id": "signatureDate",
+                "type": "date"
+            },
+            "cancelDate": {
+                "label": "Cancel Date",
+                "id": "cancelDate",
+                "type": "date"
+            },
+            "cancelReason": {
+                "label": "Reason for Cancellation",
+                "id": "cancelReason",
+                "type": "text"
+            },
+            "excludeExitInterview": {
+                "label": "Exclude Exit Interview",
+                "id": "excludeExitInterview",
+                "type": "checkbox"
+            },
+            "GST": {
+                "label": "GST",
+                "id": "GST",
+                "type": "text"
+            },
+            "GSTStatus": {
+                "label": "GST Status",
+                "id": "GSTStatus",
+                "type": ""
+            },
+            "shopName": {
+                "label": "Shop Name (Operation Name)",
+                "id": "shopName",
+                "type": "text"
+            },
+            "legalShopName": {
+                "label": "Shop Name (Legal Name)",
+                "id": "legalShopName",
+                "type": "text"
+            },
+            "address": {
+                "label": "",
+                "id": "address",
+                "type": "text"
+            },
+            "unitNumber": {
+                "label": "Unit Number",
+                "id": "unitNumber",
+                "type": "text"
+            },
+            "city": {
+                "label": "City",
+                "id": "city",
+                "type": "text"
+            },
+            "provinceSelect": {
+                "label": "Province",
+                "id": "provinceSelect",
+                "type": ""
+            },
+            "postalCode": {
+                "label": "Postal Code (M4M 2G2)",
+                "id": "postalCode",
+                "type": "text"
+            },
+            "POBox": {
+                "label": "P.O. Box",
+                "id": "POBox",
+                "type": "text"
+            },
+            "provenance": {
+                "label": "Provenance",
+                "id": "provenance",
+                "type": ""
+            },
+            "RPDL": {
+                "label": "",
+                "id": "RPDL",
+                "type": ""
+            },
+            "majorAccount": {
+                "label": "Major Account",
+                "id": "majorAccount",
+                "type": ""
+            },
+            "shopMajorAccount": {
+                "label": "Shop Number Major Account",
+                "id": "shopMajorAccount",
+                "type": "text"
+            },
+            "newShop": {
+                "label": "New Shop",
+                "id": "shopMajorAccount",
+                "type": ""
+            },
+            "contactStatus": {
+                "label": "Do Not Contact",
+                "id": "contactStatus",
+                "type": ""
+            },
+            "numberOfTechnicians": {
+                "label": "Number of Technicians",
+                "id": "numberOfTechnicians",
+                "type": "text"
+            },
+            "serviceBays": {
+                "label": "Number of Service Bays",
+                "id": "serviceBays",
+                "type": "text"
+            },
+            "doorRate": {
+                "label": "Door Rate",
+                "id": "doorRate",
+                "type": "text"
+            },
+            "KIT": {
+                "label": "KIT Status",
+                "id": "KIT",
+                "type": ""
+            },
+            "KITDate": {
+                "label": "KIT Date",
+                "id": "KITDate",
+                "type": "date"
+            },
+            "nebs": {
+                "label": "Nebs",
+                "id": "nebs",
+                "type": ""
+            },
+            "accountType": {
+                "label": "Account Type",
+                "id": "accountType",
+                "type": ""
+            },
+            "distributionCenter": {
+                "label": "Distribution Center",
+                "id": "distributionCenter",
+                "type": ""
+            },
+            "FSP": {
+                "label": "FSP Title",
+                "id": "FSP",
+                "type": ""
+            },
+            "email": {
+                "label": "Email",
+                "id": "email",
+                "type": "text"
+            },
+            "association": {
+                "label": "Member Association",
+                "id": "association",
+                "type": ""
+            },
+            "repName": {
+                "label": "Rep Name",
+                "id": "repName",
+                "type": ""
+            }
+        },
+        "placeholdersList": {
+            "signUpDate": "09/06/2021",
+            "cancelDate": "06/09/2021",
+            "status": "Please Select One"
+        }
+    }
+}

@@ -1,5 +1,6 @@
 import React from "react";
-import FormikTabs from "./FormikTabs/FormikTabs";
+import FormikComponents from "./FormikComponent/FormikComponents";
+// import FormikTabs from "./FormikTabs/FormikTabs";
 import HeaderShop from "./header/HeaderShop";
 // import FormikTest from "./LeftFormikForm/FormikTest";
 import LeftFormikForm from "./LeftFormikForm/LeftFormikForm";
@@ -15,7 +16,7 @@ const ShopIndex = () => {
         </div>
       ) : (
         <div>
-          <FormikTabs />
+          <FormikComponents />
         </div>
       )}
     </div>
