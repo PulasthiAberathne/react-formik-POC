@@ -66,12 +66,9 @@ const FormikComponents = () => {
     console.log(values);
   };
 
-  //   useEffect(() => {
-  //     // console.log("options", option);
-  //     // console.log("table data", table_data);
-  //     // console.log("form constants", constants);
-  //     // console.log("placeholders", placeholders);
-  //   }, [formName]);
+    useEffect(() => {
+      console.log(formName);
+    }, [formName]);
 
   return (
     <div>
