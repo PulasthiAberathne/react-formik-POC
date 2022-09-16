@@ -1,11 +1,11 @@
 import { Formik, Form, Field, useField } from "formik";
 import React, { useState, useEffect } from "react";
 import {
+  CustomDataTable,
   CustomInput,
   CustomSelect,
 } from "../../../components/CustomFormikComponents";
-import { option, table_data, constants } from "../../../Helpers";
-// import { shopSchema } from "../../../Schemas";
+import { option, constants, row, columns } from "../../../Helpers";
 
 const CustomAddressCheck = ({ ...props }) => {
   const [field] = useField(props);
@@ -66,9 +66,9 @@ const FormikComponents = () => {
     console.log(values);
   };
 
-    useEffect(() => {
-      console.log(formName);
-    }, [formName]);
+  useEffect(() => {
+    console.log(formName);
+  }, [formName]);
 
   return (
     <div>
@@ -573,7 +573,12 @@ const FormikComponents = () => {
               />
             </Form>
           ) : (
-            <div></div>
+            <CustomDataTable
+              columns={columns}
+              data={row}
+              highlightOnHover
+              pointerOnHover
+            />
           )
         }
       </Formik>

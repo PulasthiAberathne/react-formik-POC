@@ -2,7 +2,7 @@ import { useField } from "formik";
 import React from "react";
 
 const CustomSelect = ({ constants, data, ...props }) => {
-  const [field, form, meta] = useField(props);
+  const [field] = useField(props);
   return (
     <div
       className="custom-component"

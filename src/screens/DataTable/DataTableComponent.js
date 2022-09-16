@@ -23,8 +23,6 @@ const DataTableComponent = () => {
         data={tableDataArr}
         highlightOnHover
         pointerOnHover
-        expandableRows
-        expandOnRowClicked
       />
     </div>
   );
